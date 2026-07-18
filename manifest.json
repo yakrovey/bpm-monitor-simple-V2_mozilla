@@ -1,0 +1,58 @@
+{
+  "manifest_version": 3,
+  "name": "Монитор задач BPM V2 (Firefox)",
+  "version": "2.3.0",
+  "description": "Монитор ПРЗ/ФРЗ/ПКМ для Mozilla Firefox. Данные только локально.",
+  "permissions": [
+    "alarms",
+    "notifications",
+    "storage",
+    "tabs",
+    "windows",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://workplace.ertelecom.ru/*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://workplace.ertelecom.ru/ProcessPortal/dashboards/*",
+        "https://workplace.ertelecom.ru/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Монитор задач BPM V2",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["help.html", "INSTALL.html"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "bpm-monitor-v2-mozilla@yakrovey",
+      "strict_min_version": "121.0"
+    }
+  }
+}

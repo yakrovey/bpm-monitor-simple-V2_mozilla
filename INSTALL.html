@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Установка — Монитор BPM V2 (Firefox)</title>
+  <style>
+    body { font-family: "Segoe UI", Tahoma, sans-serif; max-width: 720px; margin: 24px auto; padding: 0 16px; line-height: 1.55; color: #1a1a1a; }
+    h1 { font-size: 22px; color: #0d47a1; }
+    h2 { font-size: 16px; color: #1565c0; margin-top: 24px; }
+    .box { background: #e3f2fd; padding: 12px 14px; border-radius: 8px; margin: 12px 0; }
+    .warn { background: #fff8e1; }
+    code { background: #eef2f7; padding: 2px 6px; border-radius: 4px; }
+    ol { padding-left: 1.3rem; }
+    li { margin: 8px 0; }
+    footer { margin-top: 32px; color: #90a4ae; font-size: 12px; text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Установка в Mozilla Firefox (Windows)</h1>
+  <p>Терминал не нужен. Нужен Firefox 121 или новее.</p>
+
+  <div class="box">
+    У вас должна быть папка <code>bpm-monitor-simple-V2_mozilla</code> с файлом <code>manifest.json</code> внутри.
+  </div>
+
+  <h2>Шаги</h2>
+  <ol>
+    <li>Откройте <strong>Firefox</strong>.</li>
+    <li>В адресной строке введите:<br><code>about:debugging#/runtime/this-firefox</code> и нажмите Enter.</li>
+    <li>Нажмите <strong>«Загрузить временное дополнение…»</strong>.</li>
+    <li>Откройте папку расширения и выберите файл <strong>manifest.json</strong> → «Открыть».</li>
+    <li>Разрешите уведомления, если Windows спросит.</li>
+    <li>Откройте дашборд BPM «Работа», нажмите иконку расширения → <strong>«Проверить сейчас»</strong>.</li>
+  </ol>
+
+  <div class="box warn">
+    <strong>Важно:</strong> после полного закрытия Firefox расширение нужно загрузить снова (Шаги 2–4).
+    Так Firefox защищает от неподписанных дополнений. Для постоянной установки нужна подпись через Mozilla / IT.
+  </div>
+
+  <h2>Подробнее</h2>
+  <p>Полный текст: файл <code>INSTALL.md</code> в этой же папке. Как пользоваться задачами и схемами — кнопка «Инструкция» в расширении.</p>
+
+  <footer>made by krylov.iav</footer>
+</body>
+</html>

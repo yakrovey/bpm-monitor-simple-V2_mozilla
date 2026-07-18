@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Монитор задач BPM V2 (Firefox)",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "Монитор ПРЗ/ФРЗ/ПКМ для Mozilla Firefox. Данные только локально.",
   "permissions": [
     "alarms",
